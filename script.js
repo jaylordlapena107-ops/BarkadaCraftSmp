@@ -1,6 +1,6 @@
 async function loadServer() {
   try {
-    const res = await fetch("https://api.allorigins.win/raw?url=http://barkadacraftsmp.sg1-mczie.fun:4156/server"), {
+    const res = await fetch("https://cors-anywhere.herokuapp.com/http://barkadacraftsmp.sg1-mczie.fun:4156/server", {
       headers: {
         "Authorization": "Bearer Tzdt6Nwav1Vng2mqakfRTVFo4MmJGHLuteV1JzD0L54cCrO6Le6RYC9I2icTsvJEtucZvivrITIEaFFwMCsJAyy8Eh6PKqZX4h4v"
       }
