@@ -36,6 +36,11 @@ h1 span {
   border: none;
   background: #0f172a;
   color: #cbd5f5;
+  transition: 0.2s;
+}
+
+.nav button:hover {
+  background: #1e293b;
 }
 
 .nav .active {
@@ -95,9 +100,28 @@ h1 span {
   background: #e5e7eb;
   color: black;
   font-weight: bold;
+  transition: 0.2s;
 }
 
-/* FULL WIDTH BUTTON (OPTIONAL) */
+/* HOVER EFFECT */
+.buttons button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* FULL WIDTH BUTTON */
 .buttons button:first-child {
   grid-column: span 2;
+}
+
+/* 🎯 DISCORD BUTTON */
+.discord {
+  background: #5865F2 !important;
+  color: white !important;
+}
+
+/* 💬 MESSENGER BUTTON */
+.messenger {
+  background: #0084ff !important;
+  color: white !important;
 }
