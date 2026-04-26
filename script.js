@@ -1,6 +1,6 @@
 async function loadServer() {
   try {
-    const res = await fetch("/api/server"), {
+    const res = await fetch("https://cors-anywhere.herokuapp.com/http://barkadacraftsmp.sg1-mczie.fun:4156/server", {
       headers: {
         "Authorization": "Bearer Tzdt6Nwav1Vng2mqakfRTVFo4MmJGHLuteV1JzD0L54cCrO6Le6RYC9I2icTsvJEtucZvivrITIEaFFwMCsJAyy8Eh6PKqZX4h4v"
       }
@@ -29,7 +29,7 @@ async function loadServer() {
     document.getElementById("cpu").innerText =
       data.health.cpuCount + " cores";
 
-    // 🧠 RAM (used vs max)
+    // 🧠 RAM
     const used = (data.health.memory.totalMemory - data.health.memory.freeMemory) / 1024 / 1024;
     const max = data.health.memory.totalMemory / 1024 / 1024;
 
@@ -52,7 +52,6 @@ async function loadServer() {
     status.innerText = "• SERVER OFFLINE";
     status.className = "offline";
 
-    // reset values
     document.getElementById("players").innerText = "0/0";
     document.getElementById("tps").innerText = "0";
     document.getElementById("cpu").innerText = "0";
@@ -62,6 +61,14 @@ async function loadServer() {
   }
 }
 
-// 🔁 refresh every 5 sec
+// 🔁 auto refresh every 5 sec
 setInterval(loadServer, 5000);
 loadServer();
+
+
+// 🎮 COPY IP BUTTON
+function copyIP() {
+  const ip = "barkadacraftsmp.sg1-mczie.fun";
+  navigator.clipboard.writeText(ip);
+  alert("Server IP copied: " + ip);
+}
