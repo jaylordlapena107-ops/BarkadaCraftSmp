@@ -22,28 +22,37 @@
   <div class="card">
     <div class="card-header">
       <h2>BARKADA CLASH</h2>
-      <span class="offline">• SERVER OFFLINE</span>
+      <span id="status" class="offline">• SERVER OFFLINE</span>
     </div>
 
     <div class="grid">
-      <div class="box">👤<br>0/20</div>
-      <div class="box">⚡ TPS<br>20</div>
-      <div class="box">💻 CPU<br>7.5% / 400%</div>
-      <div class="box">🧠 RAM<br>1087 / 15592 MB</div>
-      <div class="box">🔥 Nether<br>OPEN</div>
-      <div class="box">🌌 End<br>OPEN</div>
+      <div class="box">👤<br><span id="players">0/0</span></div>
+      <div class="box">⚡ TPS<br><span id="tps">0</span></div>
+      <div class="box">💻 CPU<br><span id="cpu">0</span></div>
+      <div class="box">🧠 RAM<br><span id="ram">0</span></div>
+      <div class="box">🔥 Nether<br><span id="nether">OFF</span></div>
+      <div class="box">🌌 End<br><span id="end">OFF</span></div>
     </div>
   </div>
 
   <div class="buttons">
-  <button class="full">▶ Join Server</button>
-  <button>📜 Rules</button>
-  <button>💬 Community Chat</button>
-  <button onclick="window.open('https://discord.gg/F7pDytk8ma')">💙 Discord</button>
-  <button onclick="window.open('https://m.me/j/AbZt09H0JEIoi1v6/?send_source=gc%3Acopy_invite_link_c')">📩 Messenger GC</button>
+    <button class="full">▶ Join Server</button>
+    <button>📜 Rules</button>
+    <button>💬 Community Chat</button>
+
+    <button class="discord" onclick="window.open('https://discord.gg/F7pDytk8ma')">
+      💙 Discord
+    </button>
+
+    <button class="messenger" onclick="window.open('https://m.me/j/AbZt09H0JEIoi1v6/?send_source=gc%3Acopy_invite_link_c')">
+      📩 Messenger GC
+    </button>
   </div>
 
 </div>
+
+<!-- CONNECT SA SCRIPT -->
+<script src="script.js"></script>
 
 </body>
 </html>
