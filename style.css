@@ -1,42 +1,69 @@
 body {
-  font-family: Arial;
-  background: #0b1220;
-  color: white;
   margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #020617, #0b1220);
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
-.container {
-  padding: 20px;
+/* FIXED WIDTH PARA PARANG APP */
+.wrapper {
+  width: 100%;
+  max-width: 420px;
+  padding: 15px;
 }
 
+/* TITLE */
+h1 {
+  font-size: 22px;
+}
 h1 span {
-  color: #4da3ff;
+  color: #3b82f6;
+}
+
+/* NAVIGATION */
+.nav {
+  display: flex;
+  gap: 8px;
+  margin: 15px 0;
 }
 
 .nav button {
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 10px;
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
   border: none;
-  background: #1c2b4a;
-  color: white;
+  background: #0f172a;
+  color: #cbd5f5;
 }
 
 .nav .active {
-  background: #3b82f6;
+  background: #2563eb;
+  color: white;
 }
 
+/* CARD */
 .card {
-  background: #14213d;
-  padding: 20px;
-  border-radius: 15px;
-  margin-top: 20px;
+  background: linear-gradient(to bottom, #1e3a8a, #1e293b);
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* HEADER */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .offline {
-  color: red;
+  color: #ef4444;
+  font-weight: bold;
 }
 
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -44,20 +71,33 @@ h1 span {
   margin-top: 15px;
 }
 
+/* BOX */
 .box {
-  background: #1f2f50;
+  background: rgba(255,255,255,0.08);
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 15px;
   text-align: center;
+  font-size: 14px;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 .buttons button {
-  width: 100%;
-  margin-top: 10px;
-  padding: 15px;
-  border-radius: 10px;
+  padding: 14px;
+  border-radius: 15px;
   border: none;
   background: #e5e7eb;
   color: black;
   font-weight: bold;
+}
+
+/* FULL WIDTH BUTTON (OPTIONAL) */
+.buttons button:first-child {
+  grid-column: span 2;
 }
