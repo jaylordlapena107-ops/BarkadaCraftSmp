@@ -64,12 +64,16 @@ h1 span {
 }
 
 // ONLINE
-status.innerHTML = "<span style='color:#22c55e'>●</span> SERVER ONLINE";
-status.className = "online";
+.offline {
+  color: #ef4444;
+  font-weight: bold;
+}
 
-// OFFLINE
-status.innerHTML = "<span style='color:#ef4444'>●</span> SERVER OFFLINE";
-status.className = "offline";
+.online {
+  color: #22c55e;
+  font-weight: bold;
+}
+
 /* GRID */
 .grid {
   display: grid;
